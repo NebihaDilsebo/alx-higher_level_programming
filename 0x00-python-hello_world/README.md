@@ -1,1 +1,1 @@
-this is the begining of python course
+Python - Hello, World
