@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""defines a rectangle"""
+
+
 class rectangle:
-    """defines a rectangle"""
+    """does nothing"""
     pass
