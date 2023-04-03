@@ -3,6 +3,6 @@
 """defines a rectangle"""
 
 
-class rectangle:
+class Rectangle:
     """does nothing"""
     pass
