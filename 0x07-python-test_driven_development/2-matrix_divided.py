@@ -8,4 +8,4 @@ def matrix_divided(matrix, div):
         raise TypeError ("div must be a number")
     if div == 0:
         raise ZeroDivisionError ("division by zero")
-    if
+    return [[round(nb/ div, 2) for nb in row] for row in matrix]
