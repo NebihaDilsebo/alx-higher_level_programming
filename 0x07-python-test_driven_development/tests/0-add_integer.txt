@@ -8,3 +8,5 @@
 100
 >>> add_integer(-2, 100)
 98
+>>> add_integer(2)
+100
