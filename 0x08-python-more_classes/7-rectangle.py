@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 3-rectangle.py by Nebiha Dilsebo
-"""represents a rectangle"""
+"""defines  a rectangle"""
 
 
 class Rectangle:
@@ -52,7 +52,12 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return "\n".join(["#" * self.width] * self.height)
+            rect_str = ""
+            for i in range(self.height):
+                rect_str += str(self.print_symbol) * self.width
+                if i != self.height - 1:
+                    rect_str += '\n'
+            return rect_str
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
