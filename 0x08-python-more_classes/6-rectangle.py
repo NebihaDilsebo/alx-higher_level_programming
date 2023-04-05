@@ -6,7 +6,7 @@
 class Rectangle:
     """represents a rectangle"""
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         """contruct a function using property and setter"""
         self.width = width
@@ -51,13 +51,12 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return "\n".join(["#" *self.width] * self.height)
+            return "\n".join(["#" * self.width] * self.height)
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
-        """prints the message Bye rectangle.. when an instance of rectangle is deleted"""
-        Rectangle.number_of_instances -= 1 
+        """prints the message Bye rectangle.. when deleted"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
