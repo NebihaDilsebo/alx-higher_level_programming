@@ -5,5 +5,5 @@ class LockedClass:
     def __setattr__(self, key, value):
         if not hasattr(self, key) and key != "first_name":
             raise AttributeError("'LockedClass' object has no attribute '{}'"
-                                 .format(name))
+                                 .format(key))
         super().__setattr__(key, value)
