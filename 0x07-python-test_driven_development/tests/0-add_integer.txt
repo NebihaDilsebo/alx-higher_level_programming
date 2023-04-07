@@ -1,7 +1,7 @@
 # 0-add_integer.txt
 ____________________
 
-This text file will be used to test a module that defines an integer addition function
+
 
 ``add_integer(...)``` returns the addition of its two arguments. For number data types, the
 result is similar to the sum of both numbers
@@ -46,24 +46,11 @@ _____________________________
 Passing Floats and Ints as args:
 ______________________________
 
->>> add_integer(5.3, -3)
-2
-
-____________________________
-
-Passing only one argument
-____________________________
+>>> add_integer(5.3, -2)
+3
 
 >>> add_integer(2)
 100
-
-____________________________
-
-Passing strings
-____________________________
-
-``add_integer()`` expects that both arguments are either integers or floats.
-If either argument is a non-integer and non-float, a TypeError is raised:
 
 >>> add_integer("mahi", 3)
 Traceback (most recent call last):
@@ -85,27 +72,26 @@ Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
->>> add_integer("aymen", hawda")
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
-____________________________
-
-Passing Infinity and NaN
-____________________________
-
->>> add_integer(2, float('inf'))
-Traceback (most recent call last):
-...
-OverflowError: cannot convert float infinity to integer
 
 >>> add_integer(float('nan'))
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
 
-add_integer(2, float('nan'))
+
+>>> add_integer(float('nan'))
 Traceback (most recent call last):
 ...
-ValueError: cannot convert float NaN to integer
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+
+
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
