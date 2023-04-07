@@ -65,12 +65,12 @@ ____________________________
 ``add_integer()`` expects that both arguments are either integers or floats.
 If either argument is a non-integer and non-float, a TypeError is raised:
 
->>> add_integer("Ahmed", 3)
+>>> add_integer("mahi", 3)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer(2, "huming-bird")
+>>> add_integer(2, "mahi")
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
@@ -85,7 +85,7 @@ Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
->>> add_integer("Olalekan", "Engineer")
+>>> add_integer("aymen", hawda")
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
