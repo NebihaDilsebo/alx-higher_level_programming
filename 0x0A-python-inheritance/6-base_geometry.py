@@ -2,10 +2,8 @@
 """module with base_geometry"""
 
 
-class BaseGeometry
-
-
-"""class that contain public instance method"""
+class BaseGeometry:
+    """class that contain public instance method"""
 
 
 def area(self):
