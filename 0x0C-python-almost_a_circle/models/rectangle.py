@@ -98,12 +98,13 @@ class Rectangle(Base):
             print()
 
     def __str_(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}"
+    .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """method that updats the attribute of a rectangle """
-            if args:
-                attrs = ["id", "width", "height", "x", "y"]
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
             for idx, value in enumerate(args):
                 setattr(self, attrs[idx], value)
             elif kwargs:
@@ -111,7 +112,6 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-            """ method that returns the dictionary
-            representation of a rectangle"""
-                    return {'id': self.id, 'width': self.width, 'height': self.height,
-                    'x': self.x, 'y': self.y}
+        """ method that returns the dictionary representation of a rectangle"""
+    return {'id': self.id, 'width': self.width, 'height': self.height,
+            'x': self.x, 'y': self.y}
