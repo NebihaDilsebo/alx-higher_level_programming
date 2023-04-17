@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """module that inherits from Base"""
 from models.base import Base
 
@@ -115,3 +116,6 @@ class Rectangle(Base):
         """ method that returns the dictionary representation of a rectangle"""
         return {'id': self.id, 'width': self.width, 'height': self.height,
             'x': self.x, 'y': self.y}
+    def to_csv(self):
+        """creates a list with rectangle attribute"""
+        return [self.id, self.width, self.height, self.x, self.y]
