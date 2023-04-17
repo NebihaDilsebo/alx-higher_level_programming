@@ -12,9 +12,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
-
-    @property
+        @property
     def width(self):
         """Returns the width of rectangle instance"""
         return self.__width
@@ -23,9 +21,9 @@ class Rectangle(Base):
     def width(self, value):
         """sets the width of the rectangle instance"""
         if not isinstance(value, int):
-            raise TypeError ('width must be an integer')
+            raise TypeError('width must be an integer')
         elif value <= 0:
-            raise ValueError ('width must be > 0')
+            raise ValueError('width must be > 0')
         else:
             self.__width = value
 
@@ -42,7 +40,7 @@ class Rectangle(Base):
         elif value <= 0:
             raise ValueError('height must be an integer')
         else:
-            self.__height =value
+            self.__height = value
 
     @property
     def x(self):
@@ -85,7 +83,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """updates by overriding"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
+                - {self.width}/{self.height}"
 
     def display(self):
         """print in stdout"""
@@ -99,22 +98,20 @@ class Rectangle(Base):
             print()
 
     def __str_(self):
-            return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
-
-        
     def update(self, *args, **kwargs):
-            """method that updats the attribute of a rectangle """
+        """method that updats the attribute of a rectangle """
             if args:
                 attrs = ["id", "width", "height", "x", "y"]
-                for idx, value in enumerate(args):
-                    setattr(self, attrs[idx], value)
+            for idx, value in enumerate(args):
+                setattr(self, attrs[idx], value)
             elif kwargs:
                 for key, value in kwargs.items():
                     setattr(self, key, value)
 
     def to_dictionary(self):
-            """ method that returns the dictionary representation of a rectangle"""
-            return {'id': self.d, 'width':self.width, 'height': self.height, 'x': self.x, 'y':self.y}
-
-       
+            """ method that returns the dictionary
+            representation of a rectangle"""
+                    return {'id': self.id, 'width': self.width, 'height': self.height,
+                    'x': self.x, 'y': self.y}

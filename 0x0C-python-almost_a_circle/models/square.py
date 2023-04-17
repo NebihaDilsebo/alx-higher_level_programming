@@ -6,28 +6,23 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """square class that inherits from Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
-        """initializes an instance of square class"""
+        """initializes an instance of Square class"""
         super().__init__(size, size, x, y, id)
-
 
     @property
     def size(self):
-        """Returns the width of square instance"""
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, value):
-        """sets the size of the square instance"""
         self.width = value
-        self.height = value
+        self.heigt = value
+    def __str__(self):
+        """updates by overriding"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
-    def __str_(self):
-            return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
-
-
-        
     def update(self, *args, **kwargs):
-            """method that updats the attribute of a Square"""
+            """method that updats the attribute of a rectangle """
             if args:
                 attrs = ["id", "width", "height", "x", "y"]
                 for idx, value in enumerate(args):
@@ -37,5 +32,6 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-            """ method that returns the dictionary representation of a Square"""
-            return {'id': self.d, 'width':self.width, 'height': self.height, 'x': self.x, 'y':self.y}
+            """ method that returns the dictionary representation of a rectangle"""
+            return {'id': self.id, 'size':self.width, 'x': self.x, 'y':self.y}
+       
