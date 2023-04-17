@@ -12,7 +12,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        @property
+    @property
     def width(self):
         """Returns the width of rectangle instance"""
         return self.__width
@@ -98,8 +98,8 @@ class Rectangle(Base):
             print()
 
     def __str_(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}"
-    .format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}"\
+                .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """method that updats the attribute of a rectangle """
@@ -107,11 +107,11 @@ class Rectangle(Base):
             attrs = ["id", "width", "height", "x", "y"]
             for idx, value in enumerate(args):
                 setattr(self, attrs[idx], value)
-            elif kwargs:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ method that returns the dictionary representation of a rectangle"""
-    return {'id': self.id, 'width': self.width, 'height': self.height,
+        return {'id': self.id, 'width': self.width, 'height': self.height,
             'x': self.x, 'y': self.y}
