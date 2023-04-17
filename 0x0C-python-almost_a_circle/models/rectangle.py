@@ -98,5 +98,38 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-        def __str_(self):
+    def __str_(self):
             return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+
+        
+    def update(self, *args):
+            """ assigns an argument to each attribute:"""
+
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+
+
+    def update(self, *args, **kwargs):
+            """method that updats the attribute of a rectangle """
+            if args:
+                attrs = ["id", "width", "height", "x", "y"]
+                for idx, value in enumerate(args):
+                    setattr(self, attrs[idx], value)
+            elif kwargs:
+                for key, value in kwargs.items():
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+            """ method that returns the dictionary representation of a rectangle"""
+            return {'id': self.d, 'width':self.width, 'height': self.height, 'x': self.x, 'y':self.y}
+
+       
