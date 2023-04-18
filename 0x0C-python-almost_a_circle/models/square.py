@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """module that inherits from Base"""
-
 from models.rectangle import Rectangle
 
 
