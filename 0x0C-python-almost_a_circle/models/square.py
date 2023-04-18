@@ -34,8 +34,8 @@ class Square(Rectangle):
             for idx, value in enumerate(args):
                 setattr(self, attrs[idx], value)
         elif kwargs:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """returns the dictionary representation of a rectangle"""
