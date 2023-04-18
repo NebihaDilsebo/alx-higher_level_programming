@@ -7,7 +7,13 @@ from models.base import Base
 class Rectangle(Base):
     """rectangle class that inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """initializes an instance of Rectangle class"""
+        """class constructor for rectangle
+
+        Attributes:
+            width (int): Private attribute for the width of the rectangle
+            height (int):Private attribute for the height of the rectangle
+            x (int): Private attribute for x value of the Rectangle
+            id (int): Private attribute id inherits from Base"""
         super().__init__(id)
         self.width = width
         self.height = height
