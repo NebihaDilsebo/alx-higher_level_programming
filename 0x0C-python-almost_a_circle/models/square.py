@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """square class that inherits from Rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """initializes an instance of Square class"""
         super().__init__(size, size, x, y, id)
@@ -20,7 +21,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """updates by overriding"""
-        return "[Rectangle] ({}) {}/{} - {}/{}\
+        return "[square] ({}) {}/{} - {}/{}\
                 .format(self.id, self.x, self.y, self.width, self.height)"
 
     def update(self, *args, **kwargs):
