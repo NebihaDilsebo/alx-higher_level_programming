@@ -93,11 +93,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """str method for class Rectangle
-
         Return:
-            The string: [class_name] (id) x/y - width/height"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
-                - {self.width}/{self.height}"
+            The string: [class_name] (id) x/y - width/height
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.y,
+                                                       self.width,
+                                                       self.height)
 
     def display(self):
         """print in stdout"""
@@ -109,10 +111,6 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
-
-    def __str_(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}"\
-                .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """method that updats the attribute of a rectangle """
