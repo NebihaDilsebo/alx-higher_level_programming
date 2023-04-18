@@ -21,8 +21,10 @@ class Square(Rectangle):
 
     def __str__(self):
         """updates by overriding"""
-        return "[square] ({}) {}/{} - {}/{}\
-                .format(self.id, self.x, self.y, self.width, self.height)"
+        return "[square] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                    self.y,
+                                                    self.width,
+                                                    self.height)
 
     def update(self, *args, **kwargs):
         """method that updats the attribute of a rectangle """
