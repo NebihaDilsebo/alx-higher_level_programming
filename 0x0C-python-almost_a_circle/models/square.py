@@ -13,15 +13,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """get the size of square"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """set the size of square"""
         self.width = value
-        self.heigt = value
+        self.height = value
 
     def __str__(self):
-        """updates by overriding"""
+        """returns the string representation of square"""
         return "[square] ({}) {}/{} - {}/{}".format(self.id, self.x,
                                                     self.y,
                                                     self.width,
