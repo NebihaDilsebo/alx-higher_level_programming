@@ -27,6 +27,17 @@ class Square(Rectangle):
                                                     self.width,
                                                     self.height)
 
+    def display(self):
+        """print in stdout"""
+        for i in range(self.y):
+            print()
+        for i in range(self.height):
+            for j in range(self.x):
+                print(" ", end="")
+            for j in range(self.width):
+                print("#", end="")
+            print()
+
     def update(self, *args, **kwargs):
         """method that updats the attribute of a rectangle """
         if args:
