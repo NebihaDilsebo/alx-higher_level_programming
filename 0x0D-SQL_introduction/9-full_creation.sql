@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS SECOND_TABLE
 (
 	id INT,
-	name VARCHAR(256)'
+	name VARCHAR(256),
 	score INT
 );
 INSERT INTO second_table VALUES
