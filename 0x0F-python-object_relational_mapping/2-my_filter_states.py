@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Created on mon Jun 18 13:42
+Created on sun Jun 18 13:42
 
 @author: Nebiha Dilsebo
 """
