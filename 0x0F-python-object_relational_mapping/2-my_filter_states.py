@@ -9,7 +9,7 @@
   9 import sys
  10
  11
- 12 if __name__ =='__main__':
+ 12 if __name__ == '__main__':
  13     args = sys.argv
  14     if len(args) != 5:
  15         print("Usage: {} username password database_nam    e".format(args[0]))
