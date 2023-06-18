@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-created on sat
+Created on sat  Jun 17 03:56
 
 @author: Nebiha Dilsebo
 """
@@ -20,10 +20,10 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost', user=username,
                          passwd=password, db=data, port=3306)
     cur = db.cursor()
-    num_rows = cur.execute("SELECT * FROM states AWHERE states.name LIKE BINARY\
-                           'N%' ORDER BY states.id;")
+    num_rows = cur.execute("SELECT * FROM states.name LIKE BINARY\
+                            'N%' ORDER BY states.id;")
     rows = cur.fetchall()
     for row in rows:
         print(row)
     cur.close()
-    db.close()
+    db.close()    
