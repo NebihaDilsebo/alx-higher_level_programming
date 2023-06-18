@@ -9,7 +9,7 @@ import MySQLdb
 import sys
 
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     args = sys.argv
     if len(args) != 4:
         print("Usage: {} username password database_name".format(args[0]))
