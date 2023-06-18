@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-Created on Sat Aug  8 09:05:11 2020
-
-@author: Robinson Montes
+Filter cities by state input safe from MySQL injections!
+takes in the name of a state as an argument and lists all cities of that state
 """
 import MySQLdb
 import sys
