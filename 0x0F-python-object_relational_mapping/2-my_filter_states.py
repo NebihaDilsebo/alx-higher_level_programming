@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Created on sun Jun 18 13:42
+Created on Sat Aug  8 09:05:11 2020
 
-@author: Nebiha Dilsebo
+@author: Robinson Montes
 """
 import MySQLdb
 import sys
