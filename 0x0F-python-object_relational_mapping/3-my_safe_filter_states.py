@@ -3,26 +3,19 @@
 Filter states by user input safe from MySQL injections!
 It takes in an argument and displays all values in the states table
 """
+
 import MySQLdb
-import sys
+from sys import argv
 
-
-if __name__ == '__main__':
-    args = sys.argv
-    if len(args) < 5:
-        print("Usage: {} username password database_name".format(args[0]))
-        exit(1)
-    username = args[1]
-    password = args[2]
-    data = args[3]
-    state_name = args[4]
-    db = MySQLdb.connect(host='localhost', user=username,
-                         passwd=password, db=data, port=3306)
-    cur = db.cursor()
-    num_rows = cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY\
-                           %s ORDER BY states.id;", (state_name,))
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
+if __name__ == "__main__":
+    db = MySQLdb.connect(host="localhost",
+                         user=argv[1], passwd=argv[2], db=argv[3])
+    query = "SELECT * FROM states\
+             WHERE states.name = %s\
+             ORDER BY states.id ASC"
+    cursor = db.cursor()
+    cursor.execute(query, (argv[4], ))
+    for state in cursor.fetchall():
+        print(state)
+    cursor.close()
     db.close()
