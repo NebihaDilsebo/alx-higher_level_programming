@@ -1,6 +1,5 @@
 #!/usr/bin/node
 const request = require('request');
-
 function getCharacters(movieId) {
   const url = `https://swapi.dev/api/films/${movieId}/`;
 
